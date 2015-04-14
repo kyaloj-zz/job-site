@@ -1,0 +1,36 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Justus</title>
+  
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assess.css">
+</head>
+
+
+
+<body>
+     <div class="container">
+
+
+
+
+
+<h1>Jobs</h1>
+<% @jobs.each do |job| %>
+  <div class="job">
+    <h2><%= link_to job.title, job.url %></h2>
+    <p><%= job.company %>
+  </div>
+<% end %>
+
+<p><%= paginate @jobs %></p>
+<p><%= link_to "Add a job", new_job_path %></p>
+
+
+</div>
+
+</body>
+
+</html>
