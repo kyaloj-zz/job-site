@@ -41,7 +41,8 @@ class ArticlesController < ApplicationController
         @article.update(article_params)
 
         redirect_to article_path(@article)
-        
+         
+         
       end
 
 
